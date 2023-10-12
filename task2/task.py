@@ -48,6 +48,13 @@ def calculate_extensional_lengths(csv_string):
     
     return output.getvalue()
 
-csv_string = "1,2\n2,3\n2,6\n3,4\n3,5"
-result_csv = calculate_extensional_lengths(csv_string)
-print(result_csv)
+
+
+def main():
+    csv_string = "1,2\n2,3\n2,6\n3,4\n3,5"
+    result_csv = calculate_extensional_lengths(csv_string)
+    print(result_csv)
+
+
+if __name__ == "__main__":
+    main()
