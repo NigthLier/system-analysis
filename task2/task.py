@@ -1,4 +1,5 @@
 import csv
+import sys
 from io import StringIO
 
 def calculate_extensional_lengths(csv_string):
@@ -51,7 +52,12 @@ def calculate_extensional_lengths(csv_string):
 
 
 def main():
-    csv_string = "1,2\n2,3\n2,6\n3,4\n3,5"
+    if len(sys.argv) != 2:
+        csv_string = "1,2\n2,3\n2,6\n3,4\n3,5"
+    else:
+        csv_string = sys.argv[1]
+        csv_string = csv_string.replace('\\n', '\n')
+    
     result_csv = calculate_extensional_lengths(csv_string)
     print(result_csv)
 
