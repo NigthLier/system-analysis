@@ -13,13 +13,12 @@ def get_csv_data(file_name, row, col):
 
 def main():
     if len(sys.argv) != 4:
-        print("Usage: python Task.py <file_name> <row_index> <column_index>")
+        print("Usage: python task.py <file_name> <row_index> <column_index>")
     else:
         file_name = sys.argv[1]
         row = int(sys.argv[2])
         col = int(sys.argv[3])
         print(get_csv_data(file_name, row, col))
-
 
 if __name__ == "__main__":
     main()

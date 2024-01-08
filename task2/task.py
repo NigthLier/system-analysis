@@ -2,7 +2,7 @@ import csv
 import sys
 from io import StringIO
 
-def calculate_extensional_lengths(csv_string):
+def task(csv_string):
     reader = csv.reader(StringIO(csv_string))
 
     matrix = {}
@@ -49,18 +49,14 @@ def calculate_extensional_lengths(csv_string):
     
     return output.getvalue()
 
-
-
 def main():
     if len(sys.argv) != 2:
-        csv_string = "1,2\n2,3\n2,6\n3,4\n3,5"
+        print("Usage: python task.py <csv string>")
     else:
         csv_string = sys.argv[1]
         csv_string = csv_string.replace('\\n', '\n')
-    
-    result_csv = calculate_extensional_lengths(csv_string)
-    print(result_csv)
-
+        result_csv = task(csv_string)
+        print(result_csv)
 
 if __name__ == "__main__":
     main()

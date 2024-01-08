@@ -26,12 +26,11 @@ def print_graph(matrix):
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python Task1.py <file_name>")
+        print("Usage: python task1.py <file_name>")
     else:
         file_name = sys.argv[1]
         matrix = get_csv_graph(file_name)
         print_graph(matrix)
-
 
 if __name__ == "__main__":
     main()
